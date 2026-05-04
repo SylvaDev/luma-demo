@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Loader from "./components/Loader";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import InteractiveTiles from "./components/InteractiveTiles";
 import Transformation from "./components/Transformation";
 import Features from "./components/Features";
 import Testimonials from "./components/Testimonials";
@@ -20,13 +19,12 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="bg-[#0B0B0F] text-white overflow-x-hidden">
+    <main className="overflow-x-hidden text-white">
       {!loaded && <Loader />}
       {loaded && (
         <>
           <Navbar />
           <Hero />
-          <InteractiveTiles />
           <Transformation />
           <Features />
           <Testimonials />
